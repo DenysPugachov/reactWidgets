@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/components/Search.css"],"names":[],"mappings":"AAAA,aACE,SAAU,CACV,eACF","file":"main.8da6ced6.chunk.css","sourcesContent":[".searchmatch {\r\n  color: red;\r\n  font-weight: bold;\r\n}\r\n"]}
