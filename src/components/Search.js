@@ -6,12 +6,21 @@ import "./Search.css";
 const Search = () => {
 
   const [term, setTerm] = useState("default");
+  const [debounceTerm, setDebounceTerm] = useState(term);
   const [results, setResults] = useState([]);
 
 
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      setDebounceTerm(term);
+    }, 1000);
+
+    return () => clearTimeout(timerId);
+
+  }, [term]);
+
 
   useEffect(() => {
-
     const search = async () => {
       const { data } = await axios.get("https://en.wikipedia.org/w/api.php", {
         params: {
@@ -19,30 +28,18 @@ const Search = () => {
           list: "search",
           origin: "*",
           format: "json",
-          srsearch: term,
+          srsearch: debounceTerm,
         }
       });
-
       setResults(data.query.search);
     };
 
-
-    //make a request on first loading without delay;
-    if (term && !results.length) {
+    if (debounceTerm) {
       search();
-    } else {
-      //make a request after stop typing delay (1000 ms)
-      const typeTimerId = setTimeout(() => {
-        if (term) {
-          search();
-        }
-      }, 1000);
-
-      return () => { clearInterval(typeTimerId); };
     }
 
+  }, [debounceTerm]);
 
-  }, [term, results.length]);
 
   const renderResults = results.map(item => {
     return (
