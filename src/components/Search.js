@@ -27,22 +27,20 @@ const Search = () => {
     };
 
 
-    //FIXME: make a request on first loading without delay;
-    // console.log(term && !results.length);
-    // if (term && !results.length) {
-    //   search();
-    // } else {
-    // }
+    //make a request on first loading without delay;
+    if (term && !results.length) {
+      search();
+    } else {
+      //make a request after stop typing delay (1000 ms)
+      const typeTimerId = setTimeout(() => {
+        if (term) {
+          search();
+        }
+      }, 1000);
 
+      return () => { clearInterval(typeTimerId); };
+    }
 
-    //make a request after stop typing delay (1000 ms)
-    const typeTimerId = setTimeout(() => {
-      if (term) {
-        search();
-      }
-    }, 1000);
-
-    return () => { clearInterval(typeTimerId); };
 
   }, [term, results.length]);
 
