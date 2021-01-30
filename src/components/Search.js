@@ -9,7 +9,7 @@ const Search = () => {
   const [debounceTerm, setDebounceTerm] = useState(term);
   const [results, setResults] = useState([]);
 
-
+  //change debounceTerm only after timeout was expired(user did not type anything)
   useEffect(() => {
     const timerId = setTimeout(() => {
       setDebounceTerm(term);
@@ -19,7 +19,7 @@ const Search = () => {
 
   }, [term]);
 
-
+  //make a request only on debounceTerm was changed(user did not type anything)
   useEffect(() => {
     const search = async () => {
       const { data } = await axios.get("https://en.wikipedia.org/w/api.php", {
