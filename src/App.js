@@ -48,6 +48,8 @@ const App = () => {
   const [selected, setSelected] = useState(options[0]);
   const [showDropdown, setShowDropdown] = useState(true);
 
+  console.log(selected);
+
   return (
     <div>
       {/* <Accordion items={ items } /> */ }
@@ -62,6 +64,7 @@ const App = () => {
         />
         : null
       }
+      <h1 style={ { color: `${selected.value}` } }>Text form dropdown</h1>
     </div>
   );
 };
