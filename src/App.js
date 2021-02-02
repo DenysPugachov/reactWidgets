@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import Dropdown from "./components/Dropdown";
+import React, { } from "react";
+import Translate from "./components/Translate";
+// import Dropdown from "./components/Dropdown";
 // import Accordion from "./components/Accordion";
 // import Search from "./components/Search";
 
@@ -28,43 +29,27 @@ import Dropdown from "./components/Dropdown";
 // ];
 
 
-const options = [
-  {
-    label: "The color Red",
-    value: "red",
-  },
-  {
-    label: "The color Green",
-    value: "green",
-  },
-  {
-    label: "The shadow is Blue",
-    value: "blue",
-  },
-];
+// const options = [
+//   {
+//     label: "The color Red",
+//     value: "red",
+//   },
+//   {
+//     label: "The color Green",
+//     value: "green",
+//   },
+//   {
+//     label: "The shadow is Blue",
+//     value: "blue",
+//   },
+// ];
 
 const App = () => {
 
-  const [selected, setSelected] = useState(options[0]);
-  const [showDropdown, setShowDropdown] = useState(true);
-
-  console.log(selected);
 
   return (
-    <div>
-      {/* <Accordion items={ items } /> */ }
-      {/* <Search /> */ }
-      <button
-        onClick={ () => { setShowDropdown(!showDropdown); } }>Toggle Dropdown</button>
-      {showDropdown ?
-        <Dropdown
-          options={ options }
-          selected={ selected }
-          onSelectedChange={ setSelected }
-        />
-        : null
-      }
-      <h1 style={ { color: `${selected.value}` } }>Text form dropdown</h1>
+    <div className="ui container">
+      <Translate />
     </div>
   );
 };
