@@ -1,17 +1,20 @@
 {
   "files": {
-    "main.js": "/reactWidgets/static/js/main.1a767a4f.chunk.js",
-    "main.js.map": "/reactWidgets/static/js/main.1a767a4f.chunk.js.map",
+    "main.css": "/reactWidgets/static/css/main.8da6ced6.chunk.css",
+    "main.js": "/reactWidgets/static/js/main.09f86e65.chunk.js",
+    "main.js.map": "/reactWidgets/static/js/main.09f86e65.chunk.js.map",
     "runtime-main.js": "/reactWidgets/static/js/runtime-main.d149e3ed.js",
     "runtime-main.js.map": "/reactWidgets/static/js/runtime-main.d149e3ed.js.map",
-    "static/js/2.6006f350.chunk.js": "/reactWidgets/static/js/2.6006f350.chunk.js",
-    "static/js/2.6006f350.chunk.js.map": "/reactWidgets/static/js/2.6006f350.chunk.js.map",
+    "static/js/2.39e25cde.chunk.js": "/reactWidgets/static/js/2.39e25cde.chunk.js",
+    "static/js/2.39e25cde.chunk.js.map": "/reactWidgets/static/js/2.39e25cde.chunk.js.map",
     "index.html": "/reactWidgets/index.html",
-    "static/js/2.6006f350.chunk.js.LICENSE.txt": "/reactWidgets/static/js/2.6006f350.chunk.js.LICENSE.txt"
+    "static/css/main.8da6ced6.chunk.css.map": "/reactWidgets/static/css/main.8da6ced6.chunk.css.map",
+    "static/js/2.39e25cde.chunk.js.LICENSE.txt": "/reactWidgets/static/js/2.39e25cde.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d149e3ed.js",
-    "static/js/2.6006f350.chunk.js",
-    "static/js/main.1a767a4f.chunk.js"
+    "static/js/2.39e25cde.chunk.js",
+    "static/css/main.8da6ced6.chunk.css",
+    "static/js/main.09f86e65.chunk.js"
   ]
 }
